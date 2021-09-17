@@ -1,0 +1,30 @@
+ALGORITHM count
+VAR
+//delcaration des variables
+vcount:=0 : INTEGER;
+lcount:=1 : INTEGER;
+mcount:=1 : INTEGER;
+c :=0 : INTEGER;
+// declaration de String
+line : STRING := "this is a really sentence."; 
+
+BEGIN
+
+    WHILE (line [c]<>".") DO
+    // count the number of words
+       IF (paragphe[c]==" ") THEN
+           mcount:= mcount+1;
+       END_IF
+    // count the number of voyelles
+       IF (line [c] in ["a","e","i","o","u","y"]) THEN
+           vcount:=vcount +1;
+       END_IF 
+    // length of line
+       lcount:=lcount+1;
+    END_WHILE
+    // affichage de resultat
+write ("le nombre des mots de line", mcount); 
+write ("le longueur de line ", lcount);
+write ("le nombre des voyelles de line ", vcount); 
+END
+
